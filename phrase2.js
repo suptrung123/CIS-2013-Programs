@@ -16,8 +16,15 @@ var vowels = function ()
 	{
 		var intVowels = 0;
 		//insert for loop here
-		
-		
+		for(intCount=0; intCount < stringEntry.length; intCount++)
+        {
+            if(stringEntry.charAt (intCount)=== "A" || stringEntry.charAt (intCount)=== "E" || stringEntry.charAt (intCount)=== "I" ||stringEntry.charAt (intCount)=== "O" || stringEntry.charAt (intCount)=== "U" ||)
+        {
+            intVowels++;
+        }
+    }
+    
+    
 		$("output").value = "There are " + intVowels + " vowels in the above phrase.";
 	}	
 } 
@@ -36,8 +43,22 @@ var consonants = function ()
 	{
 		var intConsonants = 0;
 		// insert for loop here
-		
-		
+		for(intCount=0; intCount < stringEntry.length; intCount++)
+		{
+            switch(stringEntry.charAt(intCount))
+            {
+                case "a";
+                case "e";
+                case "i";
+                case "o";
+                case "u";
+                case " ";
+                      break;
+                default:
+                    intConsonants++;
+                    break;
+            }
+        }
 		
 		$("output").value = "There are " + intConsonants + " consonants in the above phrase.";
 	}
@@ -56,7 +77,10 @@ var reverse = function ()
 	
 		var stringReversed = "";
 		// insert for loop here
-		
+		for (intCount=stringEntry.length-1; intCount>=0; intCount--)
+        {
+            stringReversed =stringReversed + stringEntry.charAt(intCount);
+        }
 		
 		$("output").value = "The reverse of the above phrase is:\n" + stringReversed;
 	}
