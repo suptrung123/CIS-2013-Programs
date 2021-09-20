@@ -1,7 +1,7 @@
 var floatAge, floatDays, intWeeks, floatMonths, intFortnights;
      floatAge = parseFloat(prompt("What is you're Age?"));
      
-     floatDays = parseFloat(floatAges*365.25); //Times age with number of days 
+     floatDays = parseFloat(floatAge*365.25); //Times age with number of days 
      floatMonths = parseFloat(floatAge*12); //times age with number of months 
      intWeeks = parseFloat(floatAge/7); // divide age with number of weeks
      intFortnights = parseFloat(floatAge/14); // divide age with number of fortnights  
