@@ -22,12 +22,12 @@ intGradeOption = parseInt(prompt("enter=1 for pass/fail or 2 for letter grade"))
 if (intGradeOption===1)
 {
     if(floatTotalPts >= 80)
-    {stringMessage = "Pass"
+    {stringFinalGrade = "Pass"
 
 }
     else
     {
-        stringMessage ="Fail"
+        stringFinalGrade ="Fail"
     }
 }
 else 
