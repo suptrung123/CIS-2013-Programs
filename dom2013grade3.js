@@ -22,12 +22,12 @@ var calculate_click = function ()
 if (intGradeOption===1)
 {
     if(floatTotalPts >= 80)
-    {stringMessage = "Pass";
+    {stringFinalGrade = "Pass";
     }
 
     else
     {
-        stringMessage ="Fail";
+        stringFinalGrade ="Fail";
     }
 }
 else 
