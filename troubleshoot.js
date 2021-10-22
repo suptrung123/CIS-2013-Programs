@@ -26,63 +26,64 @@ var fixPrinter = function() {
     //enter your code here and don't forget to send the output to the DOM
     if(boolPrinting === true)
     {
-        if(boolRedlight === true)
+        if(boolRedLight === true)
         {
             if(boolRecognised === true)
             {
-                stringOutput = stringMessage2 + stringMessage3 +stringMessage4;
-            {
-            else;
+                stringOutput = stringMessage2 + "/n" + stringMessage3 + "/n" + stringMessage4 // TTT
+
             }
-               stringOutput = stringMessage4 + stringMessage5;
-            }
-        }
-    }
-    
-    if(boolPrinting === true)
-    {
-        if(boolRedlight === false)
+            
+               else 
+                {
+                    stringOutput = stringMessage4 + "/n" + stringMessage5 //TTF 
+                }
+               
+        }   
+        if (boolRecognised === true)
         {
-            if(boolRecognised === false)
+        stringOutput = stringMessage1 + "/n" + stringMessage2 + "/n" + stringMessage3 //TFT
+
+        }
+            else
             {
-                stringOutput = stringMessage5;
-            {
-            else;
-            }
-               stringOutput = stringMessage1 + stringMessage2 + stringMessage3;
+            stringOutput = stringMessage5 // TFF
             }
         }
+
+else
+   if (boolRedLight === true)
+   {
+      if (boolRecognised === true)
+      {
+         stringOutput = stringMessage3 + "/n" + stringMessage4 // FTT
+      }
+      else
+      {
+         stringOutput = stringMessage4 // FTF
+      }
     }
-    
-    if(boolPrinting === false)
-    {
-        if(boolRedlight === true)
-        {
-            if(boolRecognised === true)
-            {
-                stringOutput = stringMessage3 +stringMessage4;
-            {
-            else;
-            }
-               stringOutput = stringMessage4;
-            }
-        }
-    }
-    
-    if(boolPrinting === false)
-    {
-        if(boolRedlight === false)
-        {
-            if(boolRecognised === false)
-            {
-                stringOutput = stringMessage6;
-            {
-            else;
-            }
-               stringOutput = stringMessage3;
-            }
-        }
-    }
+
+else
+      if (boolRecognised === true)
+      {
+         stringOutput = stringMessage3 // FFT
+      }
+      else
+      {
+         stringOutput = stringMessage6 // FFF
+      }
+
+
+
+
+
+
+$("output").value=stringOutput;
+};
+
+
+
 window.onload = function () {
     $("troubleshoot").onclick = fixPrinter;
 };
