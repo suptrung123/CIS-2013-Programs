@@ -11,6 +11,16 @@ var intMax, intMin, intRandom, intGuess, intCount;
  * number is at least 0.
 */
 
+intMin = parseInt(prompt("Choose the lowest number (but no lower than 0) in your guessing range.")); // This code prompt the user to enter a lowest number no more than 0
+
+
+while (isNaN(intMin) || intMin<0)
+{
+     intMin = parseInt(prompt("I'm sorry but you're lowest number choice is invalid. Please choose another number."));
+}
+
+
+     
 
 
 
@@ -23,6 +33,14 @@ var intMax, intMin, intRandom, intGuess, intCount;
  * number is at least 2 more than the minimum (so that there is some guessing involved).
 */
 
+intMax = parseInt(prompt("Choose the Highest number in your guessing range. Note: your highest number must be at least 2 more than 0")); // prompt the user to enter a higest number at least 2 more than 0 
+
+
+while (isNaN(intMax) || intMax <= intMin + 2 )
+{
+     intMax = parseInt(prompt("Choose the Highest number in your guessing range. Note: your highest number must be at least 2 more than 0"));
+
+} 
 
 
 
@@ -37,10 +55,15 @@ var intMax, intMin, intRandom, intGuess, intCount;
  * the portion of (intMax-intMin +1) provides the range of random values
  * the addition of + intMin provides the floor for the random number 
  */
-intRandom = parseInt (Math.floor(Math.random()*(intMax-intMin+1))+intMin);
+
+
+
+intRandom = parseInt (Math.floor(Math.random()*(intMax-intMin+1))+intMin); // The following line of code calculate and then generates the random number to be used in the guessing game.
 
 
 // set the loop counter
+
+intCount = 0  //this line sets the loop counter, start from zero 
 
 
 
@@ -49,7 +72,13 @@ intRandom = parseInt (Math.floor(Math.random()*(intMax-intMin+1))+intMin);
  * number is between the allowed max and min number choices.
 */
 
+intGuess = parseInt (prompt("What is your guess on a random number between 0 and 11")); // prompts the user to enter their guess number between 0 and 11 
 
+while (isNaN(intGuess) || intMax <= intMin )
+{
+     intGuess = parseInt(prompt("What is your guess on a random number between 0 and 11"));
+
+} 
 
 
 
@@ -60,10 +89,35 @@ intRandom = parseInt (Math.floor(Math.random()*(intMax-intMin+1))+intMin);
  * the user chooses the correct number. Each time through the loop updates the loop counter.
  */
 
+while (intGuess != intRandom) // provides the main loop and logic for the program. The user's guess is compared to the randomly generated number and feedback is given based upon whether the guess is higher or lower. The loop exits when the user chooses the correct number.
+{
+     if (intGuess < intRandom )
+     { 
+     alert = "guess to low"; 
+     }
+
+else 
+{
+   
+     
+          alert = "guess to high"; 
+     }
+
+     intCount ++; 
+     intGuess = parseInt (prompt("What is your guess on a random number between 0 and 11")); 
+
+while (isNaN(intGuess) || intMax <= intMin )
+{
+     intGuess = parseInt(prompt("What is your guess on a random number between 0 and 11"));
+
+} 
+
+
+}
+
  
  
- 
- 
+
  
  
  
