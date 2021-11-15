@@ -1,39 +1,45 @@
 //Task 1
 
-var arrayNames = new Array ("John," "Jimmy", "Robert", "Bonzo");
+var arrayNames = new Array("John, Robert, Jimmy, Bonzo"); 
+var stringMessage = ""; 
 
-var arrayInstrument = [];
+var arrayInstruments = []; 
+arrayInstruments[0] = "bass";
+arrayInstruments[1] = "vocals";
+arrayInstruments[2] = "guitar"; 
+arrayInstruments[3] = "drums"; 
 
-arrayInstrument[0] = "bass";
-arrayInstrument[1] = "vocals";
-arrayInstrument[2] = "guitar";
-arrayInstrument[3] = "drums";
 
-var stringMessage= "";
+ 
+var intCount; 
 
-var intCount;
 
-for( intCount=0; intCount<arrayNames.length; intCount++)
-
+for(intCount = 0; intCount <= arrayNames.length; intCount++)
 {
-    stringMessage = stringMessage + arrayNames[intCount] + "plays" + arrayInstrument[intCount] + "\n";
+    stringMessage = stringMessage + arrayNames[intCount] + " plays " + arrayInstruments[intCount] + "\n"; 
 }
 
-alert(stringMessage);
+
+alert(stringMessage); 
+
+
+
 //task 2
 
-var stringTimesTable="";
+var stringTimesTable = ""; 
 
-for(var x=1; x<=12; x++ )
-
+for(var x=1; x<=12; x++)
 {
-    for(var y=1; y<=12; y++ )
+    for(var y=1; y<=12; y++)
     {
-        stringTimesTable = stringTimesTable + "" + x*y + "";
+        stringTimesTable = stringTimesTable + " " + x*y + " "; 
     }
-    stringTimesTable +="\n";
+    stringTimesTable = stringTimesTable + "\n"; 
 }
-alert(stringTimesTable);
+alert(stringTimesTable); 
+
+
+
 
 
 
@@ -43,49 +49,38 @@ alert(stringTimesTable);
 //task 3
 
 var stringEvenTimes = "";
-var arrayTimesTable = [];
+var arrayTimesTables = []; 
 
-for(a=1; a<=12; a++)
+for(var x=1; x<=12; x++)
 {
-    arrayTimesTable[a]=[];
-    for(b=1; b<=12; b++)
+    arrayTimesTables[x] = []; 
+
+    for(var y=1; y<=12; y++)
     {
-        arrayTimesTable [a][b] = a*b
-
-    } 
-}
-
-
-
-alert(arrayTimesTable);
-
-
-
-
-
-var stringEvenTimes = "";
-var arrayTimesTable = [];
-for(var a=1; a<=12; a++)    
-{
-    arrayTimesTable[a]=[];
-    for(var b=1; b<=12; b++)    
-    {
-        arrayTimesTable[a][b] = a*b     //creates table values 
+        arrayTimesTables[x][y] = x*y; 
     }
 }
-for(var s=1; s<=12;s++)      //loop to process though arrays to see if values are even
+
+for(var a=1; a<12; a++)
 {
-    if (s%2===0)
+    if(a%2===0)
     {
-        for(var t=1; t<=12; t++)
+        for(var b=1; b<=12; b++)
         {
-            stringEvenTimes = stringEvenTimes + " " + arrayTimesTable[s][t] + " ";
+            stringEvenTimes = stringEvenTimes + " " + arrayTimesTables[a][b] + " "; 
         }
-    stringEvenTimes +="\n";    
+        stringEvenTimes += "\n";
     }
 }
-alert(stringEvenTimes);
+alert(stringEvenTimes); 
 
 
 
 
+var ar = [
+['apple', 'orange', 'pear'],
+['carrot', 'beans', 'peas'],
+['cookies', 'cake', 'muffins', 'pie'],
+]
+
+console.log(ar[0][1]) 
