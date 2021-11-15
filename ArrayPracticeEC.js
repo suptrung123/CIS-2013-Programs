@@ -77,10 +77,3 @@ alert(stringEvenTimes);
 
 
 
-var ar = [
-['apple', 'orange', 'pear'],
-['carrot', 'beans', 'peas'],
-['cookies', 'cake', 'muffins', 'pie'],
-]
-
-console.log(ar[0][1]) 
