@@ -16,7 +16,32 @@ var passwordCheckOld = function ()
   /* insert code
    * here
    */
-};
+
+  if (stringPassword.length < 8 )
+{
+    stringOutput = "Password must be more than eight";
+}
+else 
+{
+    for(var i=0;  i< arrayBadPasswords.length; i++) 
+    {
+        if (stringPassword === arrayBadPasswords[i]) 
+        {
+            stringOutput = "Password Matches bad Password List. Please try again.";
+            break; 
+        } 
+    }
+}
+
+ if (stringOutput = "")
+ { stringOutput = "Congratulation Password is Safe"; 
+
+} 
+
+
+$("output").value = stringOutput; 
+
+}; 
 
 window.onload = function () 
 {
