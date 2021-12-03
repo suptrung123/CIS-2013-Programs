@@ -18,10 +18,28 @@ var generate = function ()
 	var k;    //k is calculated by adding i+j and represents the next Fibonacci number
 	var stringOutput = "0 1 ";//initialize the Fibonacci series output to include the first two numbers
 
-	// write whatever kind of loop you want, given the above info, to generate the appropriate
-	// number of fibonacci numbers and then post it to the html DOM 
+if(isNaN(intCount) ||intCount < 2 || intCount > 100)
+{
+	
+	alert ("Number needs to be in between 0 to 100");
+	$("total_fib").value = ""; 
+}
 
-} 
+else 
+{
+while (intCount >2)
+{
+	
+	k = i+j; 
+	i = j; 
+	j= k 
+	stringOutput = stringOutput + k + " "; 
+	intCount--; 
+}
+	$("output").value = stringOutput; 
+}
+
+}; 
 
 // Push solution back to Output through DOM
 
